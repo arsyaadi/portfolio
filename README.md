@@ -5,13 +5,6 @@
   Source code of my personal website™</a>. Made using next.js and tailwind-css.
 </p>
 
-<div>
-<p>
-  The mobile view is currently under development.
-</p>
-    <img width="200" height="400" src="/public/preview-mobile.png" alt='preview-mobile'>
-</div>
-
 ## Running locally
 
 ```bash
@@ -31,3 +24,5 @@ Tools i'm using to build this project
 - [Tailwind CSS](https://tailwindcss.com/)
 - [GSAP](https://github.com/greensock/GSAP)
 - [Hosted on Vercel](https://vercel.com)
+
+**The mobile view is currently under development 🙃.**
