@@ -5,12 +5,21 @@
   Source code of my personal website™</a>. Made using next.js and tailwind-css.
 </p>
 
-<p align="center">
-  <img src="/public/preview-mobile.png" alt='preview-mobile'>
-</p>
+<div>
 <p>
   The mobile view is currently under development.
 </p>
+    <img width="200" height="400" src="/public/preview-mobile.png" alt='preview-mobile'>
+</div>
+
+## Running locally
+
+```bash
+git clone git@github.com:arsyaadi/portfolio.git
+cd portfolio
+npm install
+npm run dev
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
