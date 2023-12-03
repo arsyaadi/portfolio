@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +22,72 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-midnight;
+}
+
+.button {
+  @apply rounded border cursor-pointer border-aquamarine text-aquamarine bg-transparent py-5 px-7 font-SF-mono no-underline transition ease-smoth-ease-out duration-250;
+  &:hover {
+    @apply outline-none shadow-button-shadow -translate-x-0.313 -translate-y-0.313;
+  }
+  &:after {
+    @apply hidden;
+  }
+}
+
+.wrapper-img {
+  @apply relative w-max cursor-pointer h-full rounded-lg bg-aquamarine;
+
+  .img-headshot {
+    @apply rounded-lg bg-aquamarine relative mix-blend-multiply grayscale contrast-100 transition duration-500;
+  }
+  &:hover {
+    &::after {
+      @apply transition duration-500 translate-x-2 translate-y-2;
+    }
+
+    .img-headshot {
+      @apply mix-blend-normal;
+    }
+  }
+
+  &::before,
+  &::after {
+    @apply content-[''] block absolute w-full h-full rounded-lg transition duration-500;
+  }
+
+  &::before {
+    @apply top-0 left-0 bg-midnight mix-blend-screen;
+  }
+
+  &::after {
+    @apply border-2 border-aquamarine top-4 left-4 -z-[1];
+  }
+}
+
+.divider {
+  @apply w-80 h-0.5 bg-cloud-burst;
+}
+
+.skill-list {
+  @apply font-Calibre text-regent-gray before:text-aquamarine before:mx-4 before:content-['▹'];
+}
+
+.active-link {
+  @apply border-l-aquamarine bg-blue-zodiac text-aquamarine;
+}
+
+/* font */
+@font-face {
+  /* SF Mono */
+  font-family: "SFMono";
+  src: url("./_assets/fonts/SFMono/SFMonoRegular.woff") format("woff");
+
+  /* Calibre */
+  font-family: "Calibre";
+  src: url("./_assets/fonts/Calibre/Calibre-Regular.woff") format("woff");
+
+  /* Humane */
+  font-family: "Humane";
+  src: url("./_assets/fonts/Humane/Humane-Regular.woff") format("woff");
 }
