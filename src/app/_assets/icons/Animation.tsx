@@ -54,7 +54,7 @@ const IconAnimation = ({ setIsShow }: Props) => {
     return () => {
       tl.kill();
     };
-  }, []);
+  }, [setIsShow]);
 
   return (
     <div className={`fixed z-50 h-screen w-screen bg-midnight ${isHidden && 'hidden'}`}>

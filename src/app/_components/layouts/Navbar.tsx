@@ -16,16 +16,15 @@ const Navbar = () => {
   const [visible, setVisible] = useState(true);
   const navbarRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = () => {
-    const currentScrollPos = window.scrollY;
-
-    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-
-    setPrevScrollPos(currentScrollPos);
-  };
-
-
   useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
