@@ -102,10 +102,17 @@ export const config = {
     },
     {
       name: "MPM - Procurement",
-      url: "https://mpm-local.refactory.id/",
+      url: "",
       description: "MPM Motors Digital Procurement Project: A digital transformation initiative aimed at modernizing the procurement process within MPM Motors. This project introduces innovative digital solutions to streamline and diversify the sourcing of products, enhancing the efficiency and effectiveness of procurement operations.",
       image: "/projects/mpm-procurement.png",
       stack: ["Typescript", "Vue", "Tailwind CSS", "Pinia", "C#", "ASP.NET Core"],
     },
+    {
+      name: "Gaya Motor Purchase and Trading System",
+      url: "",
+      description: "The 'Gaya Motor Purchase and Trading System' is a comprehensive procurement project designed to streamline and enhance the acquisition process for Gaya Motors, a leading entity in the automotive industry. This innovative system aims to revolutionize how Gaya Motors sources, purchases, and manages its motor inventory, fostering efficiency, transparency, and optimal resource utilization.",
+      image: "/projects/gaya-motor.png",
+      stack: ["C#", "ASP.Net Core", "SQL Server"]
+    }
   ],
 };

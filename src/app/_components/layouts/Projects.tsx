@@ -52,7 +52,11 @@ const Projects = () => {
                         {project.name}
                       </a>
                     </h3>
-                    <div className={`w-full ${isEven(index) && 'flex justify-end'}`}>
+                    <div
+                      className={`w-full ${
+                        isEven(index) && "flex justify-end"
+                      }`}
+                    >
                       <div className="max-w-lg mt-5 w-full p-6 bg-blue-zodiac rounded-md">
                         <p className="text-regent-gray">
                           {project.description}
@@ -70,19 +74,29 @@ const Projects = () => {
                     </ul>
                   </div>
                   <div
-                    className={`bg-aquamarine relative rounded-sm transition duration-500  max-w-max ${
+                    className={`relative rounded-sm transition duration-500  max-w-max ${
                       isEven(index) ? "order-1 left-20" : "order-2 right-10"
                     }`}
                   >
-                    <a href={project.url} className="max-w-max">
+                    {project.url ? (
+                      <a href={project.url} className="max-w-max">
+                        <Image
+                          className="rounded-sm bg-transparent transition duration-500 cursor-pointer contrast-100"
+                          src={project.image}
+                          alt={project.name}
+                          width={600}
+                          height={500}
+                        />
+                      </a>
+                    ) : (
                       <Image
-                        className="rounded-sm bg-transparent transition duration-500 cursor-pointer mix-blend-multiply contrast-100 hover:mix-blend-normal"
+                        className="rounded-sm bg-transparent transition duration-500 contrast-100"
                         src={project.image}
                         alt={project.name}
                         width={600}
                         height={500}
                       />
-                    </a>
+                    )}
                   </div>
                 </div>
               </li>

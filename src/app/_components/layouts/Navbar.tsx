@@ -14,7 +14,6 @@ const firaMono = Fira_Mono({
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const navbarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,40 +30,12 @@ const Navbar = () => {
     };
   }, [prevScrollPos]);
 
-  useEffect(() => {
-    const nav = navbarRef.current;
-
-    const tl = gsap.timeline({
-      defaults: { ease: "power2.out" },
-    });
-
-    // Set initial state (hidden)
-    tl.set(nav, { y: '-100%', opacity: 0 });
-
-    // Fade in the entire navbar and move it to its current position
-    tl.to(nav, { y: '0%', opacity: 1, duration: 1.0 });
-
-    // Select all text elements inside the navbar
-    const textElements = nav?.querySelectorAll("a, span, div");
-
-    // Set initial state (invisible)
-    if (textElements) {
-      gsap.set(textElements, { opacity: 0 });
-      // Animate each text element to appear one by one
-      tl.to(textElements, 0.5, { opacity: 1 }, 1.1);
-    }
-
-    return () => {
-      tl.kill();
-    };
-  }, []);
-
   return (
     <nav
       className={`fixed w-full ${
         visible ? "top-0" : "-top-52"
       } navbar px-2 py-5 z-50 bg-transparent font-SF-mono mb-3 transition-all duration-500 ease-in-out`} >
-      <div className="container w-full px-4 mx-auto flex flex-wrap items-center justify-between" ref={navbarRef}>
+      <div className="container w-full px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <a
             className={`text-xl font-bold inline-block mr-4 py-2 whitespace-nowrap text-white hover:text-aquamarine transition duration-300 ${firaMono.className}`}
