@@ -26,7 +26,7 @@ export const config = {
       url: "/#jobs",
     },
     {
-      name: "Work",
+      name: "Projects",
       url: "/#projects",
     },
     {

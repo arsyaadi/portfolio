@@ -3,8 +3,8 @@ import { config } from "@/app/config";
 
 function Mail() {
   return (
-    <div className="rotate-90 z-50 fixed top-28 -right-20">
-      <div className="flex w-max items-center gap-x-16 font-SF-mono">
+    <div className="rotate-90 z-50 hidden md:block fixed top-28 -right-20">
+      <div className="flex w-max items-center gap-x-10 lg:gap-x-16 font-SF-mono">
         <div className="rotate-90 w-full">
           <div className="w-0.5 h-24 bg-rock-blue mt-8" />
         </div>

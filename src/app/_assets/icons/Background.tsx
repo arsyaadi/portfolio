@@ -1,51 +1,8 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
 
-const BackgroundAnimation = () => {
-  const backgroundRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const background = backgroundRef.current;
-
-    const tl = gsap.timeline({
-      defaults: { ease: "power2.out" },
-    });
-
-    // Rotate the entire SVG (spinner effect)
-    tl.to(
-      background,
-      { rotation: 360, transformOrigin: "center center", duration: 2 },
-      "-=1.5"
-    );
-
-    // Select all text elements inside the background
-    const textElements = background?.querySelectorAll("path");
-
-    // Set initial state (invisible)
-    if (textElements) {
-      gsap.set(textElements, { opacity: 0 });
-
-      // Animate each text element to appear one by one in a spinner effect
-      tl.to(
-        textElements,
-        0.5,
-        {
-          opacity: 1,
-          rotation: 360,
-          transformOrigin: "center center",
-          repeat: -1,
-        },
-        0.2
-      );
-    }
-
-    return () => {
-      tl.kill();
-    };
-  }, []);
+const IconBackground = () => {
 
   return (
-    <div className="absolute -right-96 -top-52 -z-30">
+    <div className="absolute -right-72 lg:-right-96 -top-96 lg:-top-52 -z-30">
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -1483,4 +1440,4 @@ l28 10 2 199 c2 109 0 270 -5 356 l-7 156 -31 -13z"
   );
 };
 
-export default BackgroundAnimation;
+export default IconBackground;

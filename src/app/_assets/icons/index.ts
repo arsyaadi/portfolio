@@ -3,7 +3,7 @@ import IconLinkedIn from "./LinkedIn";
 import IconAnimation from "./Animation";
 import IconMaintance from "./Maintance";
 import IconStackoverflow from "./Stackoverflow";
-import BackgroundAnimation from "./Background";
+import IconBackground from "./Background";
 
 export {
   IconGithub,
@@ -11,5 +11,5 @@ export {
   IconMaintance,
   IconAnimation,
   IconStackoverflow,
-  BackgroundAnimation,
+  IconBackground,
 };

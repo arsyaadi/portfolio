@@ -9,16 +9,16 @@ const firaCode = Fira_Code({
 
 const About = () => {
   return (
-    <div id="about" className="py-52 text-start w-full">
+    <div id="about" className="md:py-52 py-28 px-6 text-start w-full">
       <div className="flex items-center gap-x-2 mb-5">
-        <h2 className="font-Calibre text-3xl">
+        <h2 className="font-Calibre md:text-3xl min-w-max text-xl">
           <span className={`${firaCode.className} text-aquamarine`}>01.</span>
           About Me
         </h2>
         <div className="divider" />
       </div>
 
-      <div className="flex gap-x-20">
+      <div className="flex flex-col md:flex-row gap-x-20">
         <div>
           <div className="max-w-2xl text-regent-gray my-5 font-Calibre flex flex-col gap-y-4">
             <p>
@@ -57,14 +57,29 @@ const About = () => {
             })}
           </ul>
         </div>
-        <div className="wrapper-img mt-10 bg-aquamarine hover:-translate-x-2 -translate-y-3 duration-250 transition">
+
+        {/* desktop */}
+        <div className="hidden md:block wrapper-img md:relative md:w-max mt-16 w-full mx-auto md:mt-10 bg-aquamarine hover:-translate-x-2 -translate-y-3 duration-250 transition">
           <Image
-            className="img-headshot"
+            className="img-headshot md:relative w-full h-full"
             src="/Me.jpg"
             alt="Headshot"
             width={400}
             height={350}
           />
+        </div>
+
+        {/* mobile */}
+        <div className="px-5 md:hidden max-w-[400px] mx-auto">
+          <div className="wrapper-img sm:relative md:w-max mt-16 w-full mx-auto md:mt-10 bg-aquamarine hover:-translate-x-2 -translate-y-3 duration-250 transition">
+            <Image
+              className="img-headshot md:relative sm:w-full h-full "
+              src="/Me.jpg"
+              alt="Headshot"
+              width={400}
+              height={350}
+            />
+          </div>
         </div>
       </div>
     </div>

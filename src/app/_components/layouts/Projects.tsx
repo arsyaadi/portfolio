@@ -14,16 +14,18 @@ const isEven = (num: number) => {
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full text-start py-36">
+    <div id="projects" className="w-full px-6 text-start md:py-36 py-28">
       <div className="flex items-center gap-x-2 mb-5">
-        <h2 className="font-Calibre text-3xl">
+        <h2 className="font-Calibre md:text-3xl text-xl min-w-max">
           <span className={`${firaCode.className} text-aquamarine`}>03.</span>
           Some Things I’ve Built
         </h2>
         <div className="divider" />
       </div>
-      <div className="mt-20">
-        <ul className="">
+
+      {/* desktop */}
+      <div className="mt-20 hidden md:block">
+        <ul>
           {config.projects.map((project, index) => {
             return (
               <li key={index} className="my-28">
@@ -104,6 +106,63 @@ const Projects = () => {
           })}
         </ul>
       </div>
+
+      {/* mobile */}
+      <div className="mx-auto md:hidden">
+        <ul className="flex w-full flex-col items-center gap-y-2">
+          {config.projects.map((project, index) => {
+            return (
+              <li key={index} className="my-10 bg-blue-zodiac rounded-lg">
+                <div className="w-full h-full relative grid grid-cols-1">
+                  <div className="z-40 flex p-5 flex-col gap-y-2 h-full">
+                    <p className="text-aquamarine font-SF-mono text-sm">
+                      Featured Project
+                    </p>
+                    <h3>
+                      <a
+                        href={project.url}
+                        className="text-base font-Calibre font-bold text-fog hover:text-aquamarine"
+                      >
+                        {project.name}
+                      </a>
+                    </h3>
+                    <div className="mt-5 w-full">
+                      <p className="text-regent-gray">{project.description}</p>
+                    </div>
+                    <ul className="flex flex-wrap gap-y-2 gap-x-4 text-regent-gray mt-5 text-xs">
+                      {project.stack.map((stack, index) => {
+                        return <li key={index}>{stack}</li>;
+                      })}
+                    </ul>
+                  </div>
+                  <div className="absolute h-full rounded-sm bg-midnight opacity-5 transition duration-500 w-full">
+                    {project.url ? (
+                      <a href={project.url} className="w-full h-full absolute">
+                        <Image
+                          className="rounded-sm bg-transparent transition h-full w-full object-cover"
+                          src={project.image}
+                          alt={project.name}
+                          width={600}
+                          height={500}
+                        />
+                      </a>
+                    ) : (
+                      <Image
+                        className="rounded-sm bg-transparent h-full w-full object-cover"
+                        src={project.image}
+                        alt={project.name}
+                        width={600}
+                        height={500}
+                      />
+                    )}
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+        </div>
+      
     </div>
   );
 };

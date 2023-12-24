@@ -4,7 +4,7 @@ import Icon from "./Icon";
 
 const Social = () => {
   return (
-    <div className="w-min z-50 mx-10 fixed bottom-0">
+    <div className="w-min hidden md:block z-50 fixed bottom-0 left-2 lg:mx-10">
       <ul className="flex flex-col gap-y-8">
         {config.socialMedia.map((link, index) => {
           return (

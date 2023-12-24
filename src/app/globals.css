@@ -36,10 +36,10 @@ body {
 }
 
 .wrapper-img {
-  @apply relative w-max cursor-pointer h-full rounded-lg bg-aquamarine;
+  @apply cursor-pointer h-full rounded-lg bg-aquamarine;
 
   .img-headshot {
-    @apply rounded-lg bg-aquamarine relative mix-blend-multiply grayscale contrast-100 transition duration-500;
+    @apply rounded-lg bg-aquamarine  mix-blend-multiply grayscale contrast-100 transition duration-500;
   }
   &:hover {
     &::after {
