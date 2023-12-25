@@ -143,11 +143,11 @@ const Navbar = ({ setBlur }: IProps) => {
                       </Link>
                     </li>
                   ))}
-                  <li>
+                  <li className="my-5 px-2">
                     <a
                       href="/resume/Arsya Adi Setiawan Putra.pdf"
                       download={"Arsya-adi-setiawan-resume"}
-                      className="button !p-2 text-center mt-5"
+                      className="button !py-2 text-center mt-5"
                     >
                       Resume
                     </a>
