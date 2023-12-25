@@ -6,7 +6,6 @@ import {
   Hero,
   Jobs,
   Navbar,
-  Mobile,
   Contact,
   Projects,
 } from "@/app/_components/layouts/index";

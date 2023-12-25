@@ -11,7 +11,7 @@ const About = () => {
   return (
     <div id="about" className="md:py-52 py-28 px-6 text-start w-full">
       <div className="flex items-center gap-x-2 mb-5">
-        <h2 className="font-Calibre md:text-3xl min-w-max text-xl">
+        <h2 className="font-Calibre text-titan-white md:text-3xl min-w-max text-xl">
           <span className={`${firaCode.className} text-aquamarine`}>01.</span>
           About Me
         </h2>

@@ -108,6 +108,7 @@ const Navbar = ({ setBlur }: IProps) => {
             <button
               className="text-white cursor-pointer focus:outline-none"
               onClick={handleOpenMenuMobile}
+              aria-label="Open Menu"
             >
               <CgFormatJustify size={24} />
             </button>
@@ -142,13 +143,15 @@ const Navbar = ({ setBlur }: IProps) => {
                       </Link>
                     </li>
                   ))}
-                  <a
-                    href="/resume/Arsya Adi Setiawan Putra.pdf"
-                    download={"Arsya-adi-setiawan-resume"}
-                    className="button !p-2 text-center mt-5"
-                  >
-                    Resume
-                  </a>
+                  <li>
+                    <a
+                      href="/resume/Arsya Adi Setiawan Putra.pdf"
+                      download={"Arsya-adi-setiawan-resume"}
+                      className="button !p-2 text-center mt-5"
+                    >
+                      Resume
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div

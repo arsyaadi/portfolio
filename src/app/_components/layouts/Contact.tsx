@@ -5,7 +5,7 @@ import { config } from "@/app/config";
 const Contact = () => {
   return (
     <div id="contact" className="pt-20 md:pb-96 pb-80 px-6">
-      <div className="text-center flex w-full justify-center gap-y-4 flex-col">
+      <div className="text-center text-titan-white flex w-full justify-center gap-y-4 flex-col">
         <h2 className="text-aquamarine font-SF-mono">
           <span>04.</span>
           What&apos;s Next?

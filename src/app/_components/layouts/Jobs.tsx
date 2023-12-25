@@ -12,7 +12,7 @@ const Jobs = () => {
 
   return (
     <div id="jobs" className="lg:ml-96 px-6 md:py-36 py-28 max-h-max text-start w-full">
-      <div className="flex items-center gap-x-2 mb-5">
+      <div className="flex text-titan-white items-center gap-x-2 mb-5">
         <h2 className="font-Calibre md:text-3xl min-w-max text-xl">
           <span className={`${firaCode.className} text-aquamarine`}>02.</span>
           Where I’ve Worked

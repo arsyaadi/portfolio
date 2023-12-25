@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <div id="projects" className="w-full px-6 text-start md:py-36 py-28">
       <div className="flex items-center gap-x-2 mb-5">
-        <h2 className="font-Calibre md:text-3xl text-xl min-w-max">
+        <h2 className="font-Calibre text-titan-white md:text-3xl text-xl min-w-max">
           <span className={`${firaCode.className} text-aquamarine`}>03.</span>
           Some Things I’ve Built
         </h2>
