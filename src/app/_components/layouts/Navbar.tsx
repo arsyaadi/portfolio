@@ -50,8 +50,8 @@ const Navbar = ({ setBlur }: IProps) => {
     };
   }, [mobileMenuOpen, setBlur]);
 
-  const handleOpenMenuMobile = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+  const handleOpenMenuMobile = (value: boolean) => {
+    setMobileMenuOpen(value);
   };
 
   return (
@@ -107,7 +107,7 @@ const Navbar = ({ setBlur }: IProps) => {
           <div className="flex justify-between px-6">
             <button
               className="text-white cursor-pointer focus:outline-none"
-              onClick={handleOpenMenuMobile}
+              onClick={() => handleOpenMenuMobile(!mobileMenuOpen)}
               aria-label="Open Menu"
             >
               <CgFormatJustify size={24} />
@@ -122,7 +122,7 @@ const Navbar = ({ setBlur }: IProps) => {
 
           <div
             className={`transition-all z-50 duration-500 absolute h-screen ease-in-out ${
-              mobileMenuOpen ? "left-0" : "-left-96"
+              mobileMenuOpen ? "left-0" : "-left-[450px]"
             }`}
           >
             <div className="w-screen absolute -top-16">
@@ -133,7 +133,7 @@ const Navbar = ({ setBlur }: IProps) => {
                       <Link
                         className="px-3 py-2 flex items-center text-sm opacity-100 font-bold leading-snug text-white hover:text-aquamarine transition duration-300"
                         href={link.url}
-                        onClick={handleOpenMenuMobile}
+                        onClick={() => handleOpenMenuMobile(!mobileMenuOpen)}
                       >
                         <span className="text-aquamarine text-sm">
                           <span className={firaMono.className}>0</span>
@@ -155,8 +155,8 @@ const Navbar = ({ setBlur }: IProps) => {
                 </ul>
               </div>
               <div
-                className="w-screen top-0 absolute h-screen"
-                onClick={handleOpenMenuMobile}
+                className={`w-screen top-0 absolute h-screen ${!mobileMenuOpen && 'hidden'}`}
+                onClick={() => handleOpenMenuMobile(false)}
               ></div>
             </div>
           </div>
