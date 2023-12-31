@@ -1,8 +1,9 @@
-<p align="center">
+<p>
   <img src="/public/preview.png" alt='preview'>
 </p>
+
 <p align="center">
-  Source code of my personal website™</a>. Made using next.js and tailwind-css.
+  Source code of <a href="https://arsyaadi.vercel.app/">my personal website™</a>. Made using next.js and tailwind-css.
 </p>
 
 ## Running locally
@@ -22,7 +23,6 @@ Tools i'm using to build this project
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [GSAP](https://github.com/greensock/GSAP)
 - [Hosted on Vercel](https://vercel.com)
 
-**The mobile view is currently under development 🙃.**
+
