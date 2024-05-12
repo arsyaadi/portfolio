@@ -8,7 +8,12 @@ function Mail() {
         <div className="rotate-90 w-full">
           <div className="w-0.5 h-24 bg-rock-blue mt-8" />
         </div>
-        <a href={`mailto:${config.email}`} className="transition duration-300 hover:text-aquamarine hover:translate-x-1">{config.email}</a>
+        <a
+          href={`mailto:${config.email}`}
+          className="transition duration-300 hover:text-black hover:translate-x-1 text-medium-grey"
+        >
+          {config.email}
+        </a>
       </div>
     </div>
   );

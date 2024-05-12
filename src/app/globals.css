@@ -22,12 +22,11 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  @apply bg-midnight;
+  @apply bg-white-smoke text-black;
 }
 
 .button {
-  @apply rounded border cursor-pointer border-aquamarine text-aquamarine bg-transparent py-5 px-7 font-SF-mono no-underline transition ease-smoth-ease-out duration-250;
+  @apply rounded border cursor-pointer border-black text-black bg-transparent py-5 px-7 font-SF-mono no-underline transition ease-smoth-ease-out duration-250;
   &:hover {
     @apply outline-none shadow-button-shadow -translate-x-0.313 -translate-y-0.313;
   }
@@ -37,10 +36,10 @@ body {
 }
 
 .wrapper-img {
-  @apply cursor-pointer h-full rounded-lg bg-aquamarine;
+  @apply cursor-pointer h-full rounded-lg ;
 
   .img-headshot {
-    @apply rounded-lg bg-aquamarine  mix-blend-multiply grayscale contrast-100 transition duration-500;
+    @apply rounded-lg grayscale contrast-100 transition duration-500;
   }
   &:hover {
     &::after {
@@ -58,11 +57,11 @@ body {
   }
 
   &::before {
-    @apply top-0 left-0 bg-midnight mix-blend-screen;
+    @apply top-0 left-0 bg-white-smoke mix-blend-screen;
   }
 
   &::after {
-    @apply border-2 border-aquamarine top-4 left-4 -z-[1];
+    @apply border-2 border-black top-4 left-4 -z-[1];
   }
 }
 
@@ -71,11 +70,11 @@ body {
 }
 
 .skill-list {
-  @apply font-Calibre text-regent-gray before:text-aquamarine before:mx-4 before:content-['▹'];
+  @apply font-Calibre text-regent-gray before:text-black before:mx-4 before:content-['▹'];
 }
 
 .active-link {
-  @apply border-l-aquamarine bg-blue-zodiac text-aquamarine;
+  @apply border-l-black bg-blue-zodiac text-white;
 }
 
 /* font */

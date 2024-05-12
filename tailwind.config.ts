@@ -9,20 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        midnight: "#0a192f",
+        "white-smoke": "#F2F4F8",
         "blue-zodiac": "#112240",
         "cloud-burst": "#233554",
-        "regent-gray": "#8892b0",
+        "regent-gray": "#000000",
         "rock-blue": "#a8b2d1",
-        fog: "#ccd6f6",
-        "titan-white": "#e6f1ff",
-        aquamarine: "#64ffda",
-        "lapis-blue": "1D267D",
+        "medium-grey": "#7F7F7F"
       },
       fontFamily: {
+        "Humane": ["Humane", "sans-serif"],
         "SF-mono": ["SFMonoRegular", "monospace"],
-        Calibre: ["Calibre", "sans-serif"],
-        Humane: ["Humane", "sans-serif"],
+        "Calibre": ["Calibre", "sans-serif"],
       },
       transitionTimingFunction: {
         "smoth-ease-out": "cubic-bezier(0.645, 0.045, 0.355, 1)",
@@ -34,7 +31,7 @@ const config: Config = {
         "0.313": "5px",
       },
       boxShadow: {
-        "button-shadow": "4px 4px 0 0 #64ffda",
+        "button-shadow": "4px 4px 0 0 #000",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

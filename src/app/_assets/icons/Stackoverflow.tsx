@@ -4,12 +4,12 @@ const IconStackoverflow = () => {
   return (
     <div>
       <svg
-        fill="#ffffff"
+        fill="#7F7F7F"
         xmlns="http://www.w3.org/2000/svg"
         enableBackground="new 0 0 24 24"
         viewBox="0 0 24 24"
         id="stack-overflow"
-        className="hover:stroke-aquamarine"
+        className="hover:stroke-black"
       >
         <title>Stackoverflow</title>
         <path d="m21.25 24h-18.5c-.414 0-.75-.336-.75-.75v-7.708c0-.414.336-.75.75-.75s.75.336.75.75v6.958h17v-6.958c0-.414.336-.75.75-.75s.75.336.75.75v7.708c0 .414-.336.75-.75.75z"></path>

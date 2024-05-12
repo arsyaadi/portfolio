@@ -1,20 +1,17 @@
 "use client";
+import { IUser } from "@/app/_interfaces";
 import { config } from "@/app/config";
-import { Fira_Mono } from "next/font/google";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CgFormatJustify, CgClose } from "react-icons/cg";
 
-const firaMono = Fira_Mono({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 interface IProps {
   setBlur: (value: boolean) => void;
+  user: IUser;
 }
 
-const Navbar = ({ setBlur }: IProps) => {
+const Navbar = ({ setBlur, user }: IProps) => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -55,7 +52,7 @@ const Navbar = ({ setBlur }: IProps) => {
   };
 
   return (
-    <nav className="">
+    <nav>
       <div
         className={`container w-full hidden md:flex items-center justify-between fixed md:right-20 ${
           visible ? "top-0" : "-top-52"
@@ -63,23 +60,23 @@ const Navbar = ({ setBlur }: IProps) => {
       >
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <a
-            className={`text-xl font-bold inline-block mr-4 py-2 whitespace-nowrap text-white hover:text-aquamarine transition duration-300 ${firaMono.className}`}
+            className="text-xl font-bold inline-block mr-4 py-2 whitespace-nowrap text-medium-grey hover:text-black transition duration-300 font-SF-mono"
             href="#"
           >
             <span className="font-SF-mono font-bold">Ars_</span>
           </a>
         </div>
 
-        <div className="flex flex-grow items-center gap-x-4">
+        <div className="flex flex-grow items-center gap-x-4 w-max">
           <ul className="flex flex-row list-none lg:ml-auto">
             {config.navLinks.map((link, index) => (
               <li className="nav-item" key={index}>
                 <Link
-                  className="px-3 py-2 flex items-center text-sm  font-bold leading-snug text-white hover:text-aquamarine transition duration-300"
+                  className="px-3 py-2 flex items-center text-sm  font-bold leading-snug text-medium-grey hover:text-black transition duration-300"
                   href={link.url}
                 >
-                  <span className="text-aquamarine text-sm">
-                    <span className={firaMono.className}>0</span>
+                  <span className="text-black text-sm">
+                    <span className="font-SF-mono">0</span>
                     {index + 1}.
                   </span>
                   <span className="ml-2">{link.name}</span>
@@ -88,7 +85,7 @@ const Navbar = ({ setBlur }: IProps) => {
             ))}
           </ul>
           <a
-            href="/resume/Arsya Adi Setiawan Putra.pdf"
+            href={user?.resumeUrl}
             download={"Arsya-adi-setiawan-resume"}
             className="button !py-2"
           >
@@ -106,17 +103,17 @@ const Navbar = ({ setBlur }: IProps) => {
         <div className="my-5 w-full md:hidden">
           <div className="flex justify-between px-6">
             <button
-              className="text-white cursor-pointer focus:outline-none"
+              className="text-medium-grey cursor-pointer focus:outline-none"
               onClick={() => handleOpenMenuMobile(!mobileMenuOpen)}
               aria-label="Open Menu"
             >
               <CgFormatJustify size={24} />
             </button>
             <a
-              className={`text-xl font-bold inline-block mr-4 py-2 whitespace-nowrap text-white hover:text-aquamarine transition duration-300 ${firaMono.className}`}
+              className="text-xl font-bold inline-block mr-4 py-2 whitespace-nowrap text-medium-grey hover:text-black transition duration-300 font-SF-mono"
               href="#"
             >
-              <span className="font-SF-mono font-bold">Ars_</span>
+              <span className="font-SF-mono font-bold ">Ars_</span>
             </a>
           </div>
 
@@ -126,26 +123,26 @@ const Navbar = ({ setBlur }: IProps) => {
             }`}
           >
             <div className="w-screen absolute -top-16">
-              <div className="h-screen relative z-50 w-max px-7 bg-blue-zodiac">
+              <div className="h-screen relative z-50 w-max px-5 bg-[#DBD8E3]">
                 <ul className="flex flex-col py-36 h-screen max-w-max px-5 ">
                   {config.navLinks.map((link, index) => (
                     <li className="my-5" key={index}>
                       <Link
-                        className="px-3 py-2 flex items-center text-sm opacity-100 font-bold leading-snug text-white hover:text-aquamarine transition duration-300"
+                        className="px-3 py-2 flex items-center text-sm opacity-100 font-bold leading-snug text-white hover:text-black transition duration-300"
                         href={link.url}
                         onClick={() => handleOpenMenuMobile(!mobileMenuOpen)}
                       >
-                        <span className="text-aquamarine text-sm">
-                          <span className={firaMono.className}>0</span>
+                        <span className="text-black text-sm">
+                          <span className="font-SF-mono">0</span>
                           {index + 1}.
                         </span>
-                        <span className="ml-2">{link.name}</span>
+                        <span className="ml-2 text-black">{link.name}</span>
                       </Link>
                     </li>
                   ))}
                   <li className="my-5 px-2">
                     <a
-                      href="/resume/Arsya Adi Setiawan Putra.pdf"
+                      href={user?.resumeUrl}
                       download={"Arsya-adi-setiawan-resume"}
                       className="button !py-2 text-center mt-5"
                     >
@@ -155,7 +152,9 @@ const Navbar = ({ setBlur }: IProps) => {
                 </ul>
               </div>
               <div
-                className={`w-screen top-0 absolute h-screen ${!mobileMenuOpen && 'hidden'}`}
+                className={`w-screen top-0 absolute h-screen ${
+                  !mobileMenuOpen && "hidden"
+                }`}
                 onClick={() => handleOpenMenuMobile(false)}
               ></div>
             </div>

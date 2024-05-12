@@ -57,7 +57,7 @@ const IconAnimation = ({ setIsShow }: Props) => {
   }, [setIsShow]);
 
   return (
-    <div className={`fixed z-50 h-screen w-screen bg-midnight ${isHidden && 'hidden'}`}>
+    <div className={`fixed z-50 h-screen w-screen bg-white-smoke ${isHidden && 'hidden'}`}>
       <div className="w-full h-full flex items-center place-content-center">
         <svg
           ref={logoRef}

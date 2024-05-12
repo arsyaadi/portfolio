@@ -1,32 +1,24 @@
-"use client";
-import { useEffect, useState } from "react";
-import { Mail, Social } from "@/app/_components/common";
-import {
-  About,
-  Hero,
-  Jobs,
-  Navbar,
-  Contact,
-  Projects,
-} from "@/app/_components/layouts/index";
+import { Suspense } from "react";
+import { getProjects, getUser, getWorkExperiences } from "./_lib/data";
+import dynamic from "next/dynamic";
+import SpinerLoading from "./_assets/icons/Spinner";
 
-export default function Home() {
-  const [isBlur, setBlur] = useState(false);
+const Home = dynamic(() => import("./Home"));
+
+export default async function Index() {
+  const user = await getUser();
+  const projects = await getProjects();
+  const workExperiences = await getWorkExperiences();
 
   return (
-    <>
-      <div>
-        <Navbar setBlur={setBlur} />
-        <Social />
-        <Mail />
-        <main className={`flex overflow-x-hidden relative min-h-screen flex-col items-center justify-between lg:px-60 ${isBlur && 'blur-sm'}`}>
-          <Hero />
-          <About />
-          <Jobs />
-          <Projects />
-          <Contact />
-        </main>
-      </div>
-    </>
+    <div>
+      <Suspense fallback={<SpinerLoading />}>
+        <Home
+          user={user}
+          projects={projects}
+          workExperiences={workExperiences}
+        />
+      </Suspense>
+    </div>
   );
 }

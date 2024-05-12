@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "User" ALTER COLUMN "aboutMe" SET NOT NULL,
+ALTER COLUMN "aboutMe" SET DATA TYPE TEXT;

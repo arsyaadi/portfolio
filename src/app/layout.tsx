@@ -1,10 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Favicon from "./favicon.ico";
-import { Inter } from "next/font/google";
 import { config } from "./config";
-
-const inter = Inter({ subsets: ["latin"] });
 
 const { metaData } = config;
 
@@ -46,7 +43,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   );
 }

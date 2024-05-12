@@ -13,7 +13,7 @@ const IconBackground = () => {
       >
         <g
           transform="translate(0.000000,2000.000000) scale(0.100000,-0.100000)"
-          fill="#112240"
+          fill="#Eaedee"
           stroke="none"
         >
           <path
