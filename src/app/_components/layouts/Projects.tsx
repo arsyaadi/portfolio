@@ -12,7 +12,7 @@ const Projects = ({ projects }: { projects: IProject[] }) => {
   const visbleProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <div id="projects" className="w-full px-6 text-start md:py-36 py-24">
+    <div id="projects" className="md:py-52 py-20 px-6 text-start w-full">
       <div className="flex items-center gap-x-2 mb-5">
         <h2 className="font-Calibre text-black md:text-3xl text-xl min-w-max">
           <span className="font-SF-mono text-black">03.</span>
@@ -127,10 +127,10 @@ const Projects = ({ projects }: { projects: IProject[] }) => {
       </div>
       {/* mobile */}
       <div className="mx-auto md:hidden">
-        <ul className="flex w-full flex-col items-center gap-y-2">
+        <ul className="flex w-full flex-col items-center">
           {visbleProjects.map((project, index) => {
             return (
-              <li key={index} className="my-10 bg-medium-grey rounded-lg">
+              <li key={index} className="my-3 bg-medium-grey rounded-lg">
                 <div className="w-full h-full relative grid grid-cols-1">
                   <div className="z-40 flex p-5 flex-col gap-y-2 h-full">
                     <p className="text-white font-SF-mono text-sm">
@@ -180,7 +180,7 @@ const Projects = ({ projects }: { projects: IProject[] }) => {
           })}
         </ul>
         {!showAll ? (
-          <div className="w-full flex justify-center">
+          <div className="w-full mt-2 flex justify-center">
             <button
               onClick={() => setShowAll(true)}
               className="button transition-opacity duration-500"
@@ -189,7 +189,7 @@ const Projects = ({ projects }: { projects: IProject[] }) => {
             </button>
           </div>
         ) : (
-          <div className="w-full flex justify-center">
+          <div className="w-full mt-2 flex justify-center">
             <button
               onClick={() => setShowAll(false)}
               className="button transition-opacity duration-500"

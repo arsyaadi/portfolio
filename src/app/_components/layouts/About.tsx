@@ -36,11 +36,11 @@ const About = ({ user }: { user: IUser }) => {
         {/* desktop */}
         <div className="hidden md:block wrapper-img md:relative md:w-max mt-16 w-full mx-auto md:mt-10 hover:-translate-x-2 -translate-y-3 duration-250 transition">
           <Image
-            className="img-headshot md:relative w-full h-full"
+            className="img-headshot md:relative"
             src={user?.imageUrl}
             alt="Headshot"
             width={400}
-            height={350}
+            height={400}
           />
         </div>
 
@@ -48,11 +48,11 @@ const About = ({ user }: { user: IUser }) => {
         <div className="px-5 md:hidden max-w-[400px] mx-auto">
           <div className="wrapper-img sm:relative md:w-max mt-16 w-full mx-auto md:mt-10 bg-black hover:-translate-x-2 -translate-y-3 duration-250 transition">
             <Image
-              className="img-headshot md:relative sm:w-full h-full "
+              className="img-headshot md:relative"
               src={user?.imageUrl}
               alt="Headshot"
               width={400}
-              height={350}
+              height={400}
             />
           </div>
         </div>

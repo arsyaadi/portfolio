@@ -54,7 +54,7 @@ const Navbar = ({ setBlur, user }: IProps) => {
   return (
     <nav>
       <div
-        className={`container w-full hidden md:flex items-center justify-between fixed md:right-20 ${
+        className={`w-full hidden md:flex items-center justify-between fixed md:px-16 ${
           visible ? "top-0" : "-top-52"
         }  navbar px-2 py-5 z-50 bg-transparent font-SF-mono mb-3 transition-all duration-500 ease-in-out`}
       >
