@@ -54,7 +54,7 @@ const Navbar = ({ setBlur, user }: IProps) => {
   return (
     <nav>
       <div
-        className={`w-full hidden md:flex items-center justify-between fixed md:px-16 ${
+        className={`w-full hidden md:flex items-center justify-between fixed md:px-10 ${
           visible ? "top-0" : "-top-52"
         }  navbar px-2 py-5 z-50 bg-transparent font-SF-mono mb-3 transition-all duration-500 ease-in-out`}
       >
@@ -70,12 +70,12 @@ const Navbar = ({ setBlur, user }: IProps) => {
         <div className="flex flex-grow items-center gap-x-4 w-max">
           <ul className="flex flex-row list-none lg:ml-auto">
             {config.navLinks.map((link, index) => (
-              <li className="nav-item" key={index}>
+              <li key={index}>
                 <Link
-                  className="px-3 py-2 flex items-center text-sm  font-bold leading-snug text-medium-grey hover:text-black transition duration-300"
+                  className="px-3 py-2 flex items-center text-xl  font-bold leading-snug text-medium-grey hover:text-black transition duration-300"
                   href={link.url}
                 >
-                  <span className="text-black text-sm">
+                  <span className="text-black">
                     <span className="font-SF-mono">0</span>
                     {index + 1}.
                   </span>
@@ -87,7 +87,7 @@ const Navbar = ({ setBlur, user }: IProps) => {
           <a
             href={user?.resumeUrl}
             download={"Arsya-adi-setiawan-resume"}
-            className="button !py-2"
+            className="button text-xl !py-2"
           >
             Resume
           </a>

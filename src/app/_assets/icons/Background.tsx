@@ -1,8 +1,30 @@
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 
 const IconBackground = () => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const sequenceInner = async () => {
+      await controls.start({
+        rotate: [0, -360],
+        transition: {
+          duration: 150,
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "linear",
+        },
+      });
+    };
+
+    sequenceInner();
+  }, [controls]);
 
   return (
-    <div className="absolute -right-72 lg:-right-96 -top-96 lg:-top-52 -z-30">
+    <motion.div
+      className="absolute -right-72 lg:-right-96 -top-96 lg:-top-52 -z-30"
+      animate={controls}
+    >
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
@@ -1436,7 +1458,7 @@ l28 10 2 199 c2 109 0 270 -5 356 l-7 156 -31 -13z"
           />
         </g>
       </svg>
-    </div>
+    </motion.div>
   );
 };
 

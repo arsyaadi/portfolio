@@ -26,7 +26,7 @@ body {
 }
 
 .button {
-  @apply rounded border cursor-pointer border-black text-black bg-transparent py-5 px-7 font-SF-mono no-underline transition ease-smoth-ease-out duration-250;
+  @apply rounded border-2 cursor-pointer font-semibold border-black text-black bg-transparent py-5 px-7 font-SF-mono no-underline transition ease-smoth-ease-out duration-250;
   &:hover {
     @apply outline-none shadow-button-shadow -translate-x-0.313 -translate-y-0.313;
   }
@@ -61,7 +61,7 @@ body {
   }
 
   &::after {
-    @apply border-2 border-black top-4 left-4 -z-[1];
+    @apply border-2 absolute border-black top-10 left-4 -z-[1];
   }
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 .skill-list {
-  @apply font-Calibre text-regent-gray before:text-black before:mx-4 before:content-['▹'];
+  @apply font-Calibre text-base text-regent-gray before:text-black before:mx-4 before:content-['▹'];
 }
 
 .active-link {

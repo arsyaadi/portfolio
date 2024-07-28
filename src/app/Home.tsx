@@ -27,7 +27,6 @@ export default function Home({ user, workExperiences, projects }: IProps) {
       <div>
         <Navbar setBlur={setBlur} user={user as IUser} />
         <Social />
-        <Mail />
         <main
           className={`flex overflow-x-hidden relative min-h-screen flex-col items-center justify-between lg:px-60 ${
             isBlur && "blur-sm"
