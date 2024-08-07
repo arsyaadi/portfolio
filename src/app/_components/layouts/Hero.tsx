@@ -18,7 +18,7 @@ const Hero = ({ user }: { user: IUser }) => {
     >
       <h4 className="font-SF-mono text-3xl text-black">Hi I&apos;am</h4>
       <h1
-        className={`text-3xl md:text-5xl tracking-tighter text-black ${monserat.className}`}
+        className={`text-3xl min-h-[80px] md:min-h-0 md:text-5xl tracking-tighter text-black ${monserat.className}`}
       >
         <TypeAnimation
           sequence={[user?.name, 1000, "Software Engineer", 1000]}
