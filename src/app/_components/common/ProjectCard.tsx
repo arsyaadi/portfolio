@@ -15,7 +15,7 @@ const ProjectCard = ({ project }: { project: IProject }) => {
         height={300}
         className="rounded-t-xl object-cover object-left"
       />
-      <div className="space-y-2 p-5 flex flex-col justify-between min-h-[240px]">
+      <div className="space-y-2 p-5 flex flex-col justify-between min-h-[300px]">
         <div className="font-Calibre cursor-pointer text-lg font-bold text-neutral-700 transition-all duration-300 lg:hover:text-teal-800">
           {project.name}
         </div>

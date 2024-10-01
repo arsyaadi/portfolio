@@ -10,6 +10,8 @@ import IconCSharp from "./CSharp";
 import IconPinia from "./Pinia";
 import IconReactAdmin from "./ReactAdmin";
 import IconZustand from "./Zustand";
+import IconAzureSerivceBus from "./AzureServiceBus";
+import IconMasstransit from "./Masstransit";
 
 export {
   IconPinia,
@@ -23,5 +25,7 @@ export {
   IconMaintance,
   IconReactAdmin,
   IconBackground,
+  IconMasstransit,
   IconStackoverflow,
+  IconAzureSerivceBus,
 };

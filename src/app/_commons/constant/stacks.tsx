@@ -1,8 +1,10 @@
 import {
   IconASPCore,
+  IconAzureSerivceBus,
   IconBlazor,
   IconCosmosDB,
   IconCSharp,
+  IconMasstransit,
   IconPinia,
   IconReactAdmin,
   IconZustand,
@@ -53,4 +55,6 @@ export const STACKS: StackProps = {
   Blazor: <IconBlazor />,
   CosmosDB: <IconCosmosDB />,
   "ASP.Net Core": <IconASPCore />,
+  "Azure Service Bus": <IconAzureSerivceBus />,
+  Masstransit: <IconMasstransit />,
 };
