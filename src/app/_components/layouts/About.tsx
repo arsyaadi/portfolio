@@ -34,28 +34,28 @@ const About = ({ user }: { user: IUser }) => {
         </div>
 
         {/* desktop */}
-        <div className="hidden md:block wrapper-img md:absolute right-0  md:w-max mt-16 w-full mx-auto md:mt-10 hover:-translate-x-2 -translate-y-3 duration-250 transition">
-          <Image
-            className="img-headshot md:relative"
-            src={user?.imageUrl}
-            alt="Headshot"
-            width={400}
-            height={400}
-          />
-        </div>
+        {/* <div className="hidden md:block wrapper-img md:absolute right-0 md:w-max w-full mx-auto bottom-0 hover:-translate-x-2 -translate-y-3 duration-250 transition"> */}
+        {/*   <Image */}
+        {/*     className="img-headshot md:relative" */}
+        {/*     src={user?.imageUrl} */}
+        {/*     alt="Headshot" */}
+        {/*     width={250} */}
+        {/*     height={250} */}
+        {/*   /> */}
+        {/* </div> */}
 
         {/* mobile */}
-        <div className="px-5 md:hidden max-w-[400px] mx-auto">
-          <div className="wrapper-img sm:relative md:w-max mt-16 w-full mx-auto md:mt-10 bg-black hover:-translate-x-2 -translate-y-3 duration-250 transition">
-            <Image
-              className="img-headshot md:relative"
-              src={user?.imageUrl}
-              alt="Headshot"
-              width={400}
-              height={400}
-            />
-          </div>
-        </div>
+        {/* <div className="px-5 md:hidden max-w-[400px] mx-auto"> */}
+        {/*   <div className="wrapper-img sm:relative md:w-max mt-16 w-full mx-auto md:mt-10 bg-black hover:-translate-x-2 -translate-y-3 duration-250 transition"> */}
+        {/*     <Image */}
+        {/*       className="img-headshot md:relative" */}
+        {/*       src={user?.imageUrl} */}
+        {/*       alt="Headshot" */}
+        {/*       width={400} */}
+        {/*       height={400} */}
+        {/*     /> */}
+        {/*   </div> */}
+        {/* </div> */}
       </div>
     </div>
   );
